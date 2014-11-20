@@ -1,12 +1,9 @@
 <?php
 
-namespace Auxilium {
-    
-    class Exception extends \Exception {
-        
-        
+namespace Auxilium\Core
+{
+    class Exception extends \Exception
+    {
         
     }
-    
 }
-
