@@ -13,7 +13,7 @@ namespace Auxilium {
 
         public function __construct($o = []) {
 
-            $this->_inspector = new \Inspector($this);
+            $this->_inspector = new Inspector($this);
 
             if (is_array($o) || is_object($o)) {
 
@@ -33,7 +33,7 @@ namespace Auxilium {
                 throw new Exception("Call parent::__construct()");
             }
 
-            $getMatches = \StringMethods::match($name, "^get([a-zA-Zo-9]+)$");
+            $getMatches = StringMethods::match($name, "^get([a-zA-Zo-9]+)$");
 
             if (sizeof($getMatches) > 0) {
 
@@ -61,7 +61,7 @@ namespace Auxilium {
                 }
             }
 
-            $setMatches = \StringMethods::match($name, "^set([a-zA-Zo-9]+)$");
+            $setMatches = StringMethods::match($name, "^set([a-zA-Zo-9]+)$");
 
             if (sizeof($setMatches) > 0) {
 
@@ -101,19 +101,19 @@ namespace Auxilium {
         
         protected function _getExceptionForReadonly($property) {
             
-            return new \Exception\Readonly("{$property} is read only!!!");
+            return new Exception\Readonly("{$property} is read only!!!");
             
         }
         
         protected function _getExceptionForWriteonly($property) {
             
-            return new \Exception\Writeonly("{$property} is write only!!!");
+            return new Exception\Writeonly("{$property} is write only!!!");
             
         }
         
         protected function _getExceptionForProperty() {
             
-            return new \Exception\Property("Invalid property");
+            return new Exception\Property("Invalid property");
             
         }
         
