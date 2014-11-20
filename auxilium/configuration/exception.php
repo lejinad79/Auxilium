@@ -1,11 +1,11 @@
 <?php
 
-namespace Auxilium\Configuration
-{
+namespace Auxilium\Configuration {
+
     use Auxilium\Core as Core;
-    
-    class Exception extends Core\Exception
-    {
+
+    class Exception extends Core\Exception {
         
     }
+
 }

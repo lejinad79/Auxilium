@@ -1,11 +1,11 @@
 <?php
 
-namespace Auxilium\Core\Exception
-{
+namespace Auxilium\Core\Exception {
+
     use Auxilium\Core as Core;
-    
-    class Property extends Core\Exception
-    {
+
+    class Property extends Core\Exception {
         
     }
+
 }
